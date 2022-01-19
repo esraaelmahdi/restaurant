@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*
+// ===== start template-informations ====
+// Template-name : shopping-app
+// date : 6/2021
+// ===== end template-informations ====
+// ===== start global-styles =====
+*/
+
+*,
+*:before,
+*:after {
+    @include myprefix(box-sizing, border-box, $prefixes);
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    direction: rtl;
+    position: relative;
+    font-family: 'Cairo', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    @include myprefix(transition, all .4s ease-in-out, $prefixes);
+}
+
+a {
+    color: #fff;
+    @include myprefix(transition, all .4s ease-in-out, $prefixes);
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+button,
+button:focus,
+button:active {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include myprefix(transition, all .4s ease-in-out, $prefixes);
+}
+
+input,
+input:focus,
+input:active {
+    outline: none;
+    @include myprefix(transition, all .4s ease-in-out, $prefixes);
+}
+
+.section-padding {
+    padding: 40px 0;
+}
+
+
+/*
+===== end global-styles =====
+*/

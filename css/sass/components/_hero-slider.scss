@@ -1,0 +1,186 @@
+// start hero-section
+.hero-section {
+    position: relative;
+    background: url(../imgs/hero-bg.jpg) no-repeat fixed center center;
+    background-size: cover;
+    .swiper-container {
+        position: relative;
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        background: no-repeat center;
+        position: relative;
+        @include myprefix(background-size, cover, $prefixes);
+        .overlay {
+            @include overlay;
+            background-color: rgba(0, 0, 0, .7);
+        }
+    }
+    .nav-next,
+    .nav-prev {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        cursor: pointer;
+        color: #fff;
+        position: absolute;
+        bottom: auto;
+        top: 50%;
+        font-size: 15px;
+        border: 1px solid #fff;
+        @include myprefix(border-radius, 50%, $prefixes);
+        @include myprefix(transform, translateY(-50%), $prefixes);
+        @include myprefix(transition, all ease-in-out .6s, $prefixes);
+        &:hover {
+            color: #fff;
+            background-color: $red-color;
+            border-color: $red-color;
+        }
+    }
+    .nav-next {
+        left: auto;
+        right: 64px;
+    }
+    .nav-prev {
+        right: 110px;
+        left: auto;
+    }
+    .slider-social {
+        position: absolute;
+        right: auto;
+        left: 30px;
+        top: 50%;
+        z-index: 99999999;
+        @include myprefix(border-radius, 50%, $prefixes);
+        @include myprefix(transform, translateY(-50%), $prefixes);
+        ul {
+            li {
+                a {
+                    display: block;
+                    font-size: 17px;
+                    &:hover {
+                        color: #fff;
+                        @include myprefix(transform, rotate(360deg) scale(1.4), $prefixes);
+                    }
+                }
+            }
+            li:nth-child(2) a {
+                margin: 5px 0;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 60px;
+            background-color: #fff;
+            bottom: calc(100% + 15px);
+            left: 8px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 60px;
+            background-color: #fff;
+            top: calc(100% + 15px);
+            left: 8px;
+        }
+    }
+    .slider-content {
+        span {
+            color: #666;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: $red-color;
+            margin: 8px 0;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            line-height: 2.2;
+        }
+        ul {
+            margin-top: 10px;
+            li {
+                a {
+                    display: block;
+                    position: relative;
+                    color: $red-color;
+                    margin: 5px 0;
+                    padding-right: 15px;
+                    &::before {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        background-color: transparent;
+                        border: 1px solid $red-color;
+                        @include myprefix(border-radius, 50%, $prefixes);
+                    }
+                }
+            }
+        }
+        .order-now {
+            display: block;
+            width: fit-content;
+            padding: 8px 40px;
+            background-color: $red-color;
+            margin-top: 30px;
+            border: 1px solid $red-color;
+            @include myprefix(border-radius, 40px, $prefixes);
+            i {
+                margin-right: 6px;
+            }
+            &:hover {
+                color: $red-color;
+                background-color: transparent;
+            }
+        }
+    }
+    .slider-img {
+        img {
+            display: block;
+            max-width: 90%;
+            height: auto;
+            margin: 30px 20px 0 0;
+        }
+    }
+    .bottom-arrow {
+        width: 70px;
+        height: 70px;
+        color: #fff;
+        font-size: 19px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 9999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $red-color;
+        cursor: pointer;
+        .header-arrow-down {
+            @include myprefix(animation, arrowAnimt 1s ease-in-out infinite alternate, $prefixes);
+        }
+        @keyframes arrowAnimt {
+            0% {
+                @include myprefix(transform, translateY(10px), $prefixes);
+            }
+            100% {
+                @include myprefix(transform, translateY(-10px), $prefixes);
+            }
+        }
+    }
+}

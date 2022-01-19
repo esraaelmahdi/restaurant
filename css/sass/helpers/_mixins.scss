@@ -1,0 +1,17 @@
+$prefixes: webkit moz o ms;
+@mixin myprefix ($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        #{'-' +$prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+@mixin overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

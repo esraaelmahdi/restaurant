@@ -1,0 +1,62 @@
+// start login-screen
+.login-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 99999999999;
+    @include myprefix(transition, all ease-in-out .7s, $prefixes);
+    .close-user-icon {
+        color: #fff;
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .login-parent {
+        position: absolute;
+        z-index: 99999999999999;
+        top: 50%;
+        right: 50%;
+        width: 40%;
+        height: 350px;
+        background-color: #f9f9f9;
+        @include myprefix(transition, all ease-in-out .7s, $prefixes);
+        @include myprefix(border-radius, 20px, $prefixes);
+        @include myprefix(box-shadow, 0 0 20px rgba(0, 0, 0, .3), $prefixes);
+        @include myprefix(transform, translate(50%, -50%), $prefixes);
+        form {
+            input {
+                font-size: 12px;
+                width: 100%;
+                padding: 8px;
+                margin-top: 10px;
+                border: 1px solid rgba(0, 0, 0, .1);
+                @include myprefix(border-radius, 10px, $prefixes);
+            }
+            button {
+                font-size: 12px;
+                padding: 6px 30px;
+                margin: 0 auto;
+                color: #fff;
+                display: block;
+                margin-top: 10px;
+                border: 1px solid $red-color;
+                background-color: $red-color;
+                @include myprefix(border-radius, 10px, $prefixes);
+                &:hover {
+                    background-color: transparent;
+                    color: $red-color;
+                }
+            }
+        }
+        @media(max-width:991px) {
+            width: 80%;
+            padding: 20px;
+        }
+    }
+}

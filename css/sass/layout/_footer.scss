@@ -1,0 +1,169 @@
+// start footer
+footer {
+    .top-footer {
+        padding: 30px 0;
+        background-color: #f9f9f9;
+        .foot-box {
+            margin: 8px 0;
+            .foot-head {
+                .foot-logo {
+                    a {
+                        color: $red-color;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        span {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+                h3 {
+                    color: $red-color;
+                    font-size: 17px;
+                }
+            }
+            .foot-head:not(.logo-parent) {
+                margin-top: 20px;
+            }
+            .foot-info-bdy {
+                margin-top: 16px;
+                .foot-add {
+                    margin-top: -10px;
+                    ul {
+                        li {
+                            padding: 4px 0;
+                            a {
+                                color: #999;
+                                font-size: 14px;
+                                i {
+                                    color: $red-color;
+                                }
+                                span {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .foot-social {
+                    ul {
+                        display: flex;
+                        margin-top: 10px;
+                        li {
+                            a {
+                                color: $red-color;
+                                font-size: 14px;
+                                margin: 0 3px;
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid $red-color;
+                                border-radius: 100%;
+                                &:hover {
+                                    background-color: $red-color;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .useful-links {
+                    margin-top: 20px;
+                    li {
+                        a {
+                            color: #999;
+                            font-size: 14px;
+                            &:hover {
+                                opacity: .5;
+                                padding-right: 6px;
+                            }
+                        }
+                    }
+                }
+                .form-parent {
+                    margin-top: 20px;
+                    form {
+                        display: flex;
+                        position: relative;
+                        input {
+                            width: 100%;
+                            padding: 7px 9px;
+                            background-color: transparent;
+                            border: 1px solid $red-color;
+                            border-radius: 30px;
+                            &::placeholder {
+                                font-size: 15px;
+                            }
+                        }
+                        button {
+                            color: #fff;
+                            width: 30px;
+                            height: 30px;
+                            background-color: $red-color;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 5px;
+                            left: 4px;
+                        }
+                    }
+                    @media(max-width:991px) {
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-footer {
+        padding: 8px 0;
+        background-color: #fff;
+        .bottom-p {
+            padding: 7px 0;
+            display: flex;
+            justify-content: flex-start;
+            p {
+                color: #999;
+                font-size: 14px;
+                .bt-foot-site {
+                    color: $red-color;
+                    font-weight: 700;
+                }
+            }
+            @media(max-width:767px) {
+                justify-content: center;
+            }
+        }
+        .bottom-ul {
+            padding: 7px 0;
+            ul {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                li {
+                    position: relative;
+                    padding: 0 14px;
+                    a {
+                        display: block;
+                        font-size: 14px;
+                        color: #999;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            top: 15%;
+                            left: 0;
+                            width: 1px;
+                            height: 16px;
+                            background-color: rgba(0, 0, 0, .3);
+                        }
+                        &:hover {
+                            color: $red-color;
+                        }
+                    }
+                }
+                @media(max-width:767px) {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

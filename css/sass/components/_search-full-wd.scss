@@ -1,0 +1,50 @@
+// start search-full-wd
+.search-full-wd {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 15vh;
+    z-index: 9999999999999999999;
+    background-color: #fff;
+    @include myprefix(transition, all ease-in-out .4s, $prefixes);
+    @include myprefix(transform, translateY(-150%), $prefixes);
+    @include myprefix(box-shadow, 0 0 20px rgba(0, 0, 0, .1), $prefixes);
+    .close-srch-icon {
+        position: absolute;
+        z-index: 99999;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+        @media(max-width: 580px) {
+            top: 0;
+            right: 0;
+        }
+    }
+    .form-search {
+        height: 100%;
+        form {
+            position: relative;
+            input[type='text'] {
+                font-size: 14px;
+                width: 100%;
+                height: 50px;
+                padding: 0 15px;
+                border: 1px solid rgba(0, 0, 0, .1);
+                @include myprefix(border-radius, 7px, $prefixes);
+            }
+            .search-btn {
+                font-size: 20px;
+                position: absolute;
+                background-color: transparent;
+                left: 20px;
+                right: auto;
+            }
+        }
+    }
+}
+
+.translateY-0 {
+    @include myprefix(transform, translateY(0), $prefixes);
+}

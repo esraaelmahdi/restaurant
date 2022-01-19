@@ -1,0 +1,423 @@
+// start about
+.about {
+    padding: 0 0 40px 0;
+    position: relative;
+    background-color: #f9f9f9;
+    .catgs {
+        position: absolute;
+        padding: 20px 0;
+        z-index: 99;
+        margin-top: -92px;
+        background-color: #f0f0f0;
+        @include myprefix(border-radius, 20px, $prefixes);
+        // @include myprefix(box-shadow, 0 0 30px rgba(0, 0, 0, .1), $prefixes);
+        .catg {
+            .img-prnt {
+                overflow: hidden;
+                img {
+                    width: 70%;
+                    display: block;
+                    margin: 0 auto;
+                }
+                &:hover {
+                    img {
+                        @include myprefix(transform, scale(1.1), $prefixes);
+                    }
+                }
+            }
+        }
+        @media(max-width:767px) {
+            display: none;
+        }
+    }
+    .item {
+        margin-top: 140px;
+        .item-parent {
+            padding: 20px 10px 0;
+            background-color: #f9f9f9;
+            border: 1px solid #f9f9f9;
+            @include myprefix(border-radius, 7px, $prefixes);
+            .img {
+                overflow: hidden;
+                position: relative;
+                img {
+                    max-width: 100%;
+                }
+                i {
+                    font-size: 17px;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    color: $red-color;
+                    background-color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    @include myprefix(border-radius, 50%, $prefixes);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .data {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0;
+                font-size: 12px;
+                .name {
+                    a {
+                        color: $red-color;
+                    }
+                }
+                .addtocrt {
+                    a {
+                        color: $red-color;
+                        padding: 0 10px;
+                        border: 1px solid $red-color;
+                        background-color: transparent;
+                        border-radius: 4px;
+                        &:hover {
+                            background-color: $red-color;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            img {
+                @include myprefix(transform, scale(1.1) rotate(3deg), $prefixes);
+            }
+            .data {
+                .addtocrt {
+                    a {
+                        background-color: $red-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        @media(max-width:991px) {
+            margin-top: 80px;
+        }
+        @media(max-width:767px) {
+            margin-top: 40px;
+        }
+    }
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            @include myprefix(transform, translatey(70%), $prefixes);
+            color: #fff !important;
+            background-color: $red-color !important;
+            width: 30px;
+            height: 30px;
+        }
+        .owl-prev {
+            left: auto;
+            right: -10px;
+        }
+        .owl-next {
+            left: -10px;
+            right: auto;
+        }
+    }
+}
+
+// res-info
+.res-info {
+    background: #000 url(../imgs/hero-2.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    .col-info-prnt {
+        background-color: $red-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .info-prnt {
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            p {
+                color: #ccc;
+                margin: 6px 0;
+                font-size: 15px;
+                letter-spacing: .6px;
+            }
+            a {
+                margin-top: 25px;
+                padding: 20px 30px;
+                color: #ccc;
+                background-color: transparent;
+                border: 1px solid #ccc;
+                @media(max-width: 575px) {
+                    font-size: 12px;
+                    padding: 8px;
+                }
+                &:hover {
+                    background-color: #fff;
+                    color: $red-color;
+                }
+            }
+            @media(max-width: 575px) {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .col-img-prnt {
+        border-right: 100px solid $red-color;
+        border-bottom: 400px solid transparent;
+    }
+}
+
+// start team
+.team {
+    position: relative;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    .img-prnt {
+        height: 100%;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .team-info {
+        position: relative;
+        height: 100%;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $red-color;
+        font-weight: 700;
+        .price {
+            margin-top: 10px;
+        }
+        .social {
+            margin-top: 10px;
+            ul {
+                display: flex;
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 3px;
+                        padding: 4px;
+                        width: 30px;
+                        height: 30px;
+                        font-weight: 500;
+                        border-radius: 3px;
+                        color: $red-color;
+                        border: 1px solid $red-color;
+                        &:hover {
+                            background-color: $red-color;
+                            color: #fff;
+                        }
+                        @media(max-width: 991px) {
+                            font-size: 14px;
+                            width: 22px;
+                            height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        .position-brd {
+            position: absolute;
+            display: block;
+            border: 10px solid transparent;
+            z-index: 2;
+        }
+        .border-right {
+            left: 100%;
+            border-left-color: #f0f0f0;
+        }
+        .border-left {
+            right: 100%;
+            border-right-color: #f0f0f0;
+        }
+        @media(max-width: 991px) {
+            font-size: 14px;
+        }
+    }
+    .row-ordr {
+        @media(max-width: 750px) {
+            .col-md-3:nth-child(1) {
+                order: 2;
+            }
+            .col-md-3:nth-child(2) {
+                order: 1;
+            }
+            .col-md-3:nth-child(3) {
+                order: 4;
+            }
+            .col-md-3:nth-child(4) {
+                order: 2;
+            }
+            .col-md-3:nth-child(5) {
+                order: 5;
+            }
+            .col-md-3:nth-child(6) {
+                order: 6;
+            }
+            .col-md-3:nth-child(7) {
+                order: 7;
+            }
+            .col-md-3:nth-child(8) {
+                order: 8;
+            }
+            .team-info {
+                padding: 60px;
+                .border-right,
+                .border-left {
+                    top: 100%;
+                    border: 10px solid transparent;
+                    border-top-color: #f0f0f0;
+                }
+                .border-right {
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+                .border-left {
+                    right: 50%;
+                    transform: translate(50%, 0);
+                }
+            }
+        }
+    }
+}
+
+// end team
+// start clients-say
+.clients-say {
+    position: relative;
+    min-height: 300px;
+    background: #222 url(../imgs/cleints.jpg) fixed center center no-repeat;
+    @include myprefix(background-size, cover, $prefixes);
+    .overlay {
+        @include overlay;
+        background-color: rgba(0, 0, 0, .8);
+        .counter-parent {
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            @media(max-width: 991px) {
+                font-size: 17px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+// start our-parteners
+.our-parteners {
+    padding: 40px 0;
+    .img-parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        padding: 10px;
+        background-color: $red-color;
+        border: 1px solid rgba(0, 0, 0, .3);
+        @include myprefix(border-radius, 20px, $prefixes);
+        img {
+            width: 40%;
+            margin: 0 auto;
+            @include myprefix(transition, all ease-in-out .6s, $prefixes);
+            filter: brightness(100%) invert(50%) contrast(60%) saturate(70%) sepia(90%);
+        }
+        &:hover {
+            img {
+                filter: invert(100%);
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// start owl-products
+.owl-products {
+    position: relative;
+    background-color: #f9f9f9;
+    .products-parent {
+        position: relative;
+        .pro-parent {
+            position: relative;
+            overflow: hidden;
+            a {
+                display: block;
+                img {
+                    height: 300px;
+                    object-fit: cover;
+                }
+                .overlay {
+                    @include overlay;
+                    margin: auto;
+                    width: 90%;
+                    height: 90%;
+                    background-color: rgba(255, 255, 255, .6);
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include myprefix(transform, scaleX(0), $prefixes);
+                    @include myprefix(transition, all ease-in-out .4s, $prefixes);
+                    transform-origin: right center;
+                    span {
+                        color: $red-color;
+                        font-size: 35px;
+                    }
+                }
+            }
+            &:hover {
+                img {
+                    transition-duration: .9s;
+                    @include myprefix(transform, scale(1.1) rotate(3deg), $prefixes);
+                }
+                .overlay {
+                    @include myprefix(transform, scaleX(1), $prefixes);
+                }
+            }
+        }
+        .owl-nav {
+            display: none;
+        }
+    }
+}
+
+.scroll-btn {
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: -70px;
+    background-color: $red-color;
+    cursor: pointer;
+    @include myprefix(transition, all ease-in-out .5s, $prefixes);
+    @include myprefix(border-radius, 50%, $prefixes);
+}
+
+.show-btn-top {
+    right: 20px;
+}
